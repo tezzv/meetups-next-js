@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     client.close();
 
     return {
-        fallback: false,
+        fallback: 'blocking',
         paths: meetups.map((meetup) => ({
             params: { meetupId: meetup._id.toString() },
         })),
@@ -39,8 +39,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const meetupId = context.params.meetupId;
-
-    // console.log(meetupId)
 
     // fetch data from backend
     const client = await MongoClient.connect('mongodb+srv://tejveer:KZmHfuQjDMuiJZyN@cluster0.2kdoidj.mongodb.net/meetups');
