@@ -14,7 +14,7 @@ async function handler(req, res) {
 
         const result = await meetupCollection.insertOne(data);
 
-        console.log(result);
+        // console.log(result);
 
         client.close();
 

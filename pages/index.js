@@ -1,15 +1,19 @@
 import MeetupList from '../components/meetups/MeetupList'
-import { MongoClient } from 'mongodb'; 
+import { MongoClient } from 'mongodb';
 import Head from 'next/head';
 
 const HomePage = (props) => {
 
   return (
     <>
-    <Head>
-      <title>Meetups</title>
-      <meta name='description' content='Some popular meetups' />
-    </Head>
+      <Head>
+        <title>Meetups</title>
+        <meta name='description' content='Some popular meetups' />
+        <meta property="og:title" content="Meetups" />
+        <meta property="og:description" content="Some popular meetups" />
+        <meta property="og:url" content="https://next-js-demo-project1-git-master-tezzv.vercel.app/" />
+        <meta property="og:image" content="/meetups-preview.jpeg" />
+      </Head>
       <MeetupList meetups={props.meetups} />
     </>
   )
