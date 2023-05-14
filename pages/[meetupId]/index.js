@@ -50,6 +50,8 @@ export async function getStaticProps(context) {
         _id: new ObjectId(meetupId),
     });
 
+    client.close();
+
 
     return {
         props: {
