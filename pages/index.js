@@ -12,7 +12,7 @@ const HomePage = (props) => {
         <meta property="og:title" content="Meetups" />
         <meta property="og:description" content="Some popular meetups" />
         <meta property="og:url" content="https://next-js-demo-project1-git-master-tezzv.vercel.app/" />
-        <meta property="og:image" content="/images/meetups-preview.jpeg" />
+        <meta property="og:image" content='https://next-js-demo-project1-git-master-tezzv.vercel.app/images/meetups-preview.jpeg' />
       </Head>
       <MeetupList meetups={props.meetups} />
 
