@@ -6,12 +6,24 @@ const MeetupDetails = (props) => {
     return (
         <>
             <Head>
+                {/* <!-- HTML Meta Tags --> */}
                 <title>{props.meetupData.title}</title>
-                <meta name='description' content={props.meetupData.description} />
+                <meta name="description" content={props.meetupData.description} />
+
+                {/* <!-- Facebook Meta Tags --> */}
+                <meta property="og:url" content={`https://next-js-demo-project1-git-master-tezzv.vercel.app/${props.meetupData.id}`} />
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={props.meetupData.title} />
                 <meta property="og:description" content={props.meetupData.description} />
-                <meta property="og:url" content={`https://next-js-demo-project1-git-master-tezzv.vercel.app/${props.meetupData.id}`} />
                 <meta property="og:image" content={props.meetupData.image} />
+
+                {/* <!-- Twitter Meta Tags --> */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="next-js-demo-project1-git-master-tezzv.vercel.app" />
+                <meta property="twitter:url" content={`https://next-js-demo-project1-git-master-tezzv.vercel.app/${props.meetupData.id}`} />
+                <meta name="twitter:title" content={props.meetupData.title} />
+                <meta name="twitter:description" content={props.meetupData.description} />
+                <meta name="twitter:image" content={props.meetupData.image} />
             </Head>
             <MeetupDetail image={props.meetupData.image}
                 title={props.meetupData.title}

@@ -3,6 +3,9 @@ import { MongoClient } from 'mongodb';
 import Head from 'next/head';
 
 const HomePage = (props) => {
+  const gotoTotp = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -25,8 +28,18 @@ const HomePage = (props) => {
         <meta name="twitter:title" content="Meetups" />
         <meta name="twitter:description" content="Find the best places to meet up with friends and family while exploring popular tourist spots and historic monuments." />
         <meta name="twitter:image" content="https://next-js-demo-project1-git-master-tezzv.vercel.app/images/meetups-preview.jpeg" />
+
       </Head>
       <MeetupList meetups={props.meetups} />
+      <div   >
+        <img src="/images/topIcon.png" style={{
+          position: "fixed", height: "4rem",
+          width: "4rem", bottom: "20px",
+          right: "10px", cursor: "pointer"
+        }}
+          onClick={gotoTotp}
+        />
+      </div>
 
     </>
   )
